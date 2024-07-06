@@ -1,0 +1,54 @@
+/* src/components/Sidebar.css */
+.sidebar {
+  width: 250px;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  background-color: #2c3e50;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  transform: translateX(0); /* Par défaut ouvert */
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar.closed {
+  transform: translateX(-250px); /* Sidebar fermé, décalage de la largeur du sidebar */
+}
+
+.sidebar-menu {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.sidebar-menu a {
+  color: #ecf0f1;
+  padding: 10px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-menu a:hover {
+  background-color: #34495e;
+}
+
+.sidebar-theme-switch {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  color: #ecf0f1;
+}
+
+.sidebar-toggle-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: #ecf0f1;
+  z-index: 1100;
+}

@@ -1,0 +1,9 @@
+.main-content {
+    margin-left: 250px; /* Marge à gauche pour tenir compte de la largeur du sidebar ouvert */
+    transition: margin-left 0.3s ease;
+  }
+  
+  .main-content.closed-sidebar {
+    margin-left: 0; /* Ajustement lorsque le sidebar est fermé */
+  }
+  

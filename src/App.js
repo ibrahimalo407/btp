@@ -1,25 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { ThemeProvider as MuiThemeProvider, createTheme } from '@mui/material/styles';
+import Sidebar from './components/Sidebar';
+import Dashboard from './components/Dashboard';
+import Header from './components/Header';
+import { ThemeProvider, useTheme } from './ThemeContext'; // Assurez-vous que le chemin est correct ici
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider>
+      <MuiThemeProvider theme={createTheme(useCustomTheme)}>
+        <Router>
+          <div className="app">
+            <Header />
+            <Sidebar />
+            <main className="main-content">
+              <Routes>
+                <Route path="/" element={<Dashboard />} />
+                {/* Ajoutez d'autres routes ici */}
+              </Routes>
+            </main>
+          </div>
+        </Router>
+      </MuiThemeProvider>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
+
+// Custom Theme
+const useCustomTheme = () => {
+  const { darkMode } = useTheme();
+
+  return createTheme({
+    palette: {
+      mode: darkMode ? 'dark' : 'light',
+      primary: {
+        main: '#1976d2',
+      },
+      secondary: {
+        main: '#dc004e',
+      },
+    },
+  });
+};
