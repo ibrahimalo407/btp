@@ -1,0 +1,23 @@
+/* src/components/Communication.css */
+.communication {
+    padding: 20px;
+  }
+  
+  .communication-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .messages,
+  .documents {
+    margin-top: 20px;
+  }
+  
+  .message,
+  .document {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+  

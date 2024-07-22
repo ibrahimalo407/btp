@@ -1,0 +1,19 @@
+/* src/components/SubcontractorManagement.css */
+.subcontractor-management {
+    padding: 16px;
+  }
+  
+  .subcontractor-management .MuiTypography-h4 {
+    margin-bottom: 16px;
+  }
+  
+  .subcontractor-management .MuiButton-containedPrimary {
+    margin-bottom: 16px;
+  }
+  
+  .subcontractor-management .MuiListItem-root {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  

@@ -5,13 +5,18 @@ const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
   const [darkMode, setDarkMode] = useState(false);
-  const [customColor, setCustomColor] = useState('#1976d2');
+  const [customColor, setCustomColor] = useState('#1976d2'); // Couleur primaire par défaut
 
-  const toggleDarkMode = () => setDarkMode((prevMode) => !prevMode);
-  const updateCustomColor = (color) => setCustomColor(color);
+  const toggleDarkMode = () => {
+    setDarkMode((prevMode) => !prevMode);
+  };
+
+  const setThemeColor = (color) => {
+    setCustomColor(color);
+  };
 
   return (
-    <ThemeContext.Provider value={{ darkMode, customColor, toggleDarkMode, updateCustomColor }}>
+    <ThemeContext.Provider value={{ darkMode, toggleDarkMode, customColor, setThemeColor }}>
       {children}
     </ThemeContext.Provider>
   );

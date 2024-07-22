@@ -14,6 +14,10 @@ const Sidebar = () => {
         <Link to="/projects">Projets</Link>
         <Link to="/resources">Ressources</Link>
         <Link to="/expenses">Dépenses</Link>
+        <Link to="/subcontractors">Sous-traitants</Link>
+        <Link to="/communication">Communication</Link>
+        <Link to="/chat">Chat</Link>
+
       </div>
       <div className="sidebar-theme-switch">
         <div className="color-picker" style={{ backgroundColor: customColor }}></div>
