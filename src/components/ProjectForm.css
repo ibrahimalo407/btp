@@ -1,0 +1,26 @@
+/* src/components/ProjectForm.css */
+
+.project-form {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .project-form .MuiTextField-root {
+    margin-bottom: 10px;
+  }
+  
+  .project-form .MuiButton-root {
+    margin-top: 10px;
+  }
+  
+  .date-picker {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #c4c4c4;
+    border-radius: 4px;
+  }
+  

@@ -1,29 +1,20 @@
 // src/ThemeContext.js
-import React, { createContext, useState, useContext } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 
 const ThemeContext = createContext();
 
-export const useTheme = () => useContext(ThemeContext);
-
 export const ThemeProvider = ({ children }) => {
   const [darkMode, setDarkMode] = useState(false);
-  const [customColor, setCustomColor] = useState('#3498db'); // Couleur par défaut
+  const [customColor, setCustomColor] = useState('#1976d2');
 
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
+  const toggleDarkMode = () => setDarkMode((prevMode) => !prevMode);
+  const updateCustomColor = (color) => setCustomColor(color);
 
-  const toggleCustomColor = (color) => {
-    setCustomColor(color);
-  };
-
-  const theme = {
-    darkMode,
-    toggleDarkMode,
-    customColor,
-    toggleCustomColor,
-  };
-
-  return <ThemeContext.Provider value={theme}>{children}</ThemeContext.Provider>;
+  return (
+    <ThemeContext.Provider value={{ darkMode, customColor, toggleDarkMode, updateCustomColor }}>
+      {children}
+    </ThemeContext.Provider>
+  );
 };
-  
+
+export const useTheme = () => useContext(ThemeContext);

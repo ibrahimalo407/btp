@@ -1,0 +1,26 @@
+.project-list {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #0a4296;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+  }
+  
+  .project-list .MuiButton-root {
+    margin-bottom: 10px;
+  }
+  
+  .project-list .MuiTable-root {
+    margin-top: 20px;
+  }
+  
+  .project-list .MuiTableCell-root {
+    font-weight: bold;
+  }
+  
+  .project-list .MuiTableCell-head {
+    background-color: #0a4296;
+    font-weight: bold;
+    color: white;
+  }
+  

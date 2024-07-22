@@ -1,0 +1,35 @@
+/* src/components/ExpenseTracking.css */
+
+.expense-tracking {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .expense-item {
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .expense-item button {
+    margin-left: 10px;
+  }
+  
+  .expense-tracking form {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .expense-tracking form input,
+  .expense-tracking form button {
+    margin: 5px 0;
+  }
+  
